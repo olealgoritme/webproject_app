@@ -1,15 +1,10 @@
-*{
-}
-body{
-  background-color:#666;
-}
-.app-card {
-  list-style:none;
-}
+
+
 ul{
   overflow:hidden;
   padding:3em;
 }
+
 .app-card a{
   text-decoration:none;
   color:#000;
@@ -25,10 +20,11 @@ ul{
   -o-transition:-o-transform .15s linear;
   -webkit-transition:-webkit-transform .15s linear;
 }
-.app-card{
+.app-card {
   margin:1em;
   float:left;
   border: 0px;
+  list-style:none;
 }
 .app-card h2{
   font-size:140%;
@@ -44,7 +40,12 @@ ul{
   -o-transform: rotate(-6deg);
   -moz-transform:rotate(-6deg);
 }
-.app-card:nth-child(even) a{
+
+
+/* need to randomize child element index so we can 
+ * get random rotations and/or colors */
+
+.app-card:nth-child(2n+1) a{
   -o-transform:rotate(4deg);
   -webkit-transform:rotate(4deg);
   -moz-transform:rotate(4deg);
@@ -52,7 +53,7 @@ ul{
   top:5px;
   background:#cfc;
 }
-.app-card:nth-child(3n) a{
+.app-card:nth-child(3n+2) a{
   -o-transform:rotate(-3deg);
   -webkit-transform:rotate(-3deg);
   -moz-transform:rotate(-3deg);
@@ -60,14 +61,28 @@ ul{
   top:-5px;
   background:#ccf;
 }
-.app-card:nth-child(5n) a{
+.app-card:nth-child(5n+3) a{
   -o-transform:rotate(5deg);
   -webkit-transform:rotate(5deg);
   -moz-transform:rotate(5deg);
   position:relative;
   top:-10px;
 }
-.app-card a:hover,.card a:focus{
+.app-card:nth-child(7n+5) a{
+  -o-transform:rotate(-1deg);
+  -webkit-transform:rotate(-1deg);
+  -moz-transform:rotate(-1deg);
+  position:relative;
+  top:-10px;
+}
+.app-card:nth-child(11n+7) a{
+  -o-transform:rotate(3deg);
+  -webkit-transform:rotate(3deg);
+  -moz-transform:rotate(3deg);
+  position:relative;
+  top:-10px;
+}
+.app-card a:hover,.app-card a:focus{
   box-shadow:10px 10px 7px rgba(0,0,0,.7);
   -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
   -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
@@ -76,6 +91,8 @@ ul{
   -o-transform: scale(1.25);
   position:relative;
   z-index:5;
+  text-decoration:none;
+  color:#666;
 }
 ol{text-align:center;}
 ol .app-card{display:inline;padding-right:1em;}
