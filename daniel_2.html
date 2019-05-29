@@ -9,9 +9,9 @@
     </head>
 
     <body>
-        <!-- Fixed navigational menu -->
+        <!-- Fixed navigational menu, Start of Navbar area -->
         <div class="navbar-fixed">
-            <!-- Dropdown content -->
+            <!-- Dropdown content, js needs to be implemented for it to work -->
             <ul id="user-dropdown" class="dropdown-content">
                 <li><a href="#">User settings</a></li>
             </ul>
@@ -20,9 +20,11 @@
                 <!-- Links -->
                 <div class="nav-wrapper blue-grey">
                     <!-- Logo -->
-                    <a href="#" class="brand-logo center">Some image</a>
+                    <a href="#" class="brand-logo center">image</a>
+                    <!-- Hamburger menu for smaller screens, js needs to be implemented for it to work -->
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <!-- Links on the left -->
-                    <ul class="nav-mobile left">
+                    <ul class="nav-mobile left hide-on-med-and-down">
                         <li class="active"><a href="#"><i class="material-icons left">house</i>Home</a></li>
                         <li><a href="#"><i class="material-icons left">grid_on</i>Tables</a></li>
                         <li><a href="#"><i class="material-icons left">info</i>About</a></li>
@@ -45,9 +47,21 @@
                 </div>
                 
             </nav>
-        </div>
+            
+            <!-- Hamburger menu content -->
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+            </ul>
+        </div> <!-- End of Navbar area -->
         
-        <script type="text/javascript" src="js/daniel_2.js"></script>
+        
+        <!-- Footer start area -->
+        
+        <!-- Footer END -->
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/daniel_2.js"></script>
     </body>
 </html>
