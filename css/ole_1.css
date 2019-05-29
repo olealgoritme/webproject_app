@@ -1,1 +1,31 @@
+/*
+ * Class that limits the BasicCard to only showing
+ * 2 lines of text.
+ * Usage: <p class="basic-card-ellipsis">Long text, very long</p>
+ * */
+
+.basic-card {
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 10%;
+    max-height: 15%;
+}
+
+.basic-card-ellipsis {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2; /* number of lines to show */
+}
+
+/*
+ * Container for all the cards
+ * */
+.card-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 95%;
+}
+
 
