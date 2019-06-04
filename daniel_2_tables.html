@@ -52,10 +52,9 @@
 
                 <!-- Hamburger menu content, invisible until screen is resized -->
                 <ul class="sidenav" id="mobile-demo">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">Javascript</a></li>
-                    <li><a href="mobile.html">Mobile</a></li>
+                    <li><a href="daniel_2_home.html">Home</a></li>
+                    <li><a class="active" href="#">Tables</a></li>
+                    <li><a href="daniel_2_about.html">About</a></li>
                 </ul>
             </div> <!-- End of Navbar area -->
         </header> <!-- Header END -->
@@ -65,23 +64,60 @@
             <!-- Modal Trigger, add trigger to each card -->
             <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
             <!-- Modal Structure -->
-            <div id="modal1" class="modal modal-fixed-footer">
+            <div id="modal1" class="modal modal-footer blue-grey lighten-2">
+                <h4 class="center"><span id="modal-title">Title</span></h4>
                 <!-- Modal content -->
-                <div class="modal-content">
-                    <h4 class="center"><span id="modal-title">Title</span></h4>
-                    <p>Informasjon fra kort.</p>
+                <div class="modal-content row">
+                    <!-- Modal images -->
+                    <div id="modal-images" class="col s3">
+                        <img src="img/daniel/daniel_2.jpg" class="responsive-img">
+                        <img src="img/daniel/daniel_1.jpg" class="responsive-img">
+                        <img src="img/daniel/daniel_2.jpg" class="responsive-img">
+                    </div>
+                    <!-- Modal Description -->
+                    <div id="modal-description" class="col s6 blue-grey lighten-3">
+                        <p id="description-input">A fitting description for the card.</p>
+                    </div>
+                    <!-- Modal userlist -->
+                    <div id="modal-user-container" class="col s3">
+                        <div class="container center">Assigned</div>
+                        <!-- Container for assigned users -->
+                        <div id="modal-user-list" class="container center">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                </div>
+                            </div>
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                </div>
+                            </div>
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                </div>
+                            </div>
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                </div>
+                            </div>
+                            <div class="container center">
+                            <!-- Button to assign user -->
+                            <i id="assign-user" class="small material-icons">add</i>
+                        </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Modal footer -->
-                <div class="modal-footer row">
-                    <div class="col s2">1</div>
-                    <div class="col s2">2</div>
-                    <div class="col s2">3</div>
-                    <div class="col s2">4</div>
+                <div id="modal-footer" class="modal-footer row">
+                    <div class="col s2">3 attachments</div>
+                    <div class="col s2"></div>
                     <div class="col s2">
-                        <i class="material-icons grey-text text-lighten-1">access_time</i>
-                        <i class="material-icons grey-text text-lighten-1">grade</i>
-                        <i class="material-icons grey-text text-lighten-1">notifications</i>
-                        <i class="material-icons grey-text text-lighten-1">done</i>
+                        <a href="#">Link to files</a>
+                    </div>
+                    <div class="col s4">
+                        <i id="modal-icon-1" class="material-icons grey-text">access_time</i>
+                        <i id="modal-icon-2" class="material-icons grey-text">grade</i>
+                        <i id="modal-icon-3" class="material-icons grey-text">notifications</i>
+                        <i id="modal-icon-4" class="material-icons grey-text">done</i>
                     </div>
                     <div class="col s2">
                         <!-- Modal CLOSE button -->
