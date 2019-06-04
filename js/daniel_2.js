@@ -8,7 +8,14 @@ $(document).ready(function(){
     $(".dropdown-trigger").dropdown();
     $('.sidenav').sidenav();
 });
+// modal assign user button
+var userAssignButton = document.getElementById("assign-user");
 
+userAssignButton.addEventListener("click", assignUser);
+
+function assignUser(){
+    alert("added user");
+}
 
 // modal icons changing color on click
 var modalIcon1 = document.getElementById("modal-icon-1");
