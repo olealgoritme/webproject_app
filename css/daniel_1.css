@@ -8,5 +8,14 @@ body {
     flex: 1 0 auto;
   }
 
-
+.search-fix{
+    width: 60px;
+    border-radius: 50%;
+    border-top-left-radius: 0;
+    transition: 0.5s ease;
+}
+.search-fix:focus-within, .search-fix:hover{
+    width: 50%;
+    border-radius: 0;
+}
 
