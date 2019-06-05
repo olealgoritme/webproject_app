@@ -169,7 +169,7 @@
     opacity: 0.8;
     -webkit-transition: opacity .1s;
     transition: opacity .1s;
-    border: 3px dashed white;
+    border: 2px dashed white;
 }
 
 .mockup.dropover:after {
@@ -177,13 +177,16 @@
 }
 
 #card-container {
-    padding: 40px;
+    height: 100%;
+    vertical-align: middle;
+    padding-top: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
     display: grid;
     width: 100%;
     grid-column-gap: 20px;
-    grid-row-gap: 35px;
-    grid-template-columns: repeat(4, 300px);
-    grid-template-rows: auto auto auto;
+    grid-row-gap: 15px;
+    grid-template-columns: repeat(4, 400px);
 }
 
 .rounded {
@@ -201,4 +204,9 @@
     -webkit-transform .15s ease-out;
     -webkit-transform: scale(1.1);
 */
+}
+
+.column {
+    padding-right: 20px;
+    padding-right: 20px;
 }
