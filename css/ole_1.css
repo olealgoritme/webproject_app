@@ -187,6 +187,7 @@
     grid-column-gap: 20px;
     grid-row-gap: 15px;
     grid-template-columns: repeat(4, 400px);
+    overflow: scroll;
 }
 
 .rounded {
