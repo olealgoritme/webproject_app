@@ -13,7 +13,7 @@
 
 
 
-.basic-card-ellipsis {
+.text-ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -169,8 +169,36 @@
     opacity: 0.8;
     -webkit-transition: opacity .1s;
     transition: opacity .1s;
+    border: 3px dashed white;
 }
 
-.mockup.dropover:hover {
+.mockup.dropover:after {
     transform: scale(1.0) 1s ease-in-out;
+}
+
+#card-container {
+    padding: 40px;
+    display: grid;
+    width: 100%;
+    grid-column-gap: 20px;
+    grid-row-gap: 35px;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: auto auto auto;
+}
+
+.rounded {
+    border-radius: .50rem !important;
+}
+
+.card-swapped {
+    opacity: 0.8;
+    transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    /*
+    transform .15s ease-out;
+    transform: rotate(0deg);
+    transform: scale(1.1);
+    -webkit-transform .15s ease-out;
+    -webkit-transform: scale(1.1);
+*/
 }

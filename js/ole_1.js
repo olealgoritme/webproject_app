@@ -11,18 +11,51 @@ function debug(s) {
     console.log(s);
 }
 
+function handleCardClick(e) {
+
+  var card = this;
+  card = BasicCard.fromHTML(card);
+  debug(this);
+  $('#modal-title').text(card._title);
+  $('#modal-text').text(card._text);
+
+  // TODO: Add dynamically through JS
+  /*
+                  <div class="row">
+                      <div class="col s6">
+                          <img src="img/daniel/daniel_1.jpg"
+     class="responsive-img rounded">
+                      </div>
+                      <div class="col s6">
+                          <img src="img/daniel/daniel_1.jpg"
+     class="responsive-img rounded">
+                      </div>
+                  </div>
+                  */
+}
+
+// Function that moves the content between two HTML elements
 function handleDrop(e) {
   if (e.stopPropagation)
     e.stopPropagation();
 
-  this.className = this.className.replace(' dropover', '');
+  var thisCard = this;
+  thisCard.className = thisCard.className.replace(' dropover', '');
+  thisCard.className = thisCard.className.replace(' card-swapped', '');
 
   // only swap cards if we're landing on other cards
-  if (draggedCard != this) {
-    draggedCard.innerHTML = this.innerHTML;
-    this.innerHTML = e.dataTransfer.getData('text/html');
+  if (draggedCard != thisCard) {
+
+    // Animate the card being swapped - OR NOT? FU.
+    thisCard.className = thisCard.className + ' card-swapped';
+    setTimeout(function() {
+      thisCard.className = thisCard.className.replace(' card-swapped', '');
+    }, 500);
+
+    draggedCard.innerHTML = thisCard.innerHTML;
+    thisCard.innerHTML = e.dataTransfer.getData('text/html');
     debug("droppedOn: card=");
-    debug(this);
+    debug(thisCard);
   }
   return false;
 }
@@ -68,6 +101,7 @@ function handleDragOver(e) {
 }
 
 // Simple modeling
+//
 
 class User {
   constructor(id, name, email, avatar) {
@@ -169,10 +203,10 @@ class BasicCard extends Card {
     var id = object.dataset.id;
     var title = $('#card-title-' + id, object).text();
     var text = $('#card-text-' + id, object).text();
-    var links =
-        object.querySelectorAll("div[data-id='" + id + "'] a[card-link-^]");
+    var links;
+    /*=object.querySelectorAll("div[data-id='" + id + "'] a[card-link-^]");
     links = JSON.stringify(links); // TODO: convert to js array
-    debug(links);
+    debug(links); */
     var icon = $("#card-icon-" + id, object).text();
     var assignedto; // = object.dataset.assignedto; // TODO: convert to js array
 
@@ -218,6 +252,8 @@ $(document).ready(function() {
   debug(cards);
 
   for (var i = 0; i < cards.length; i++) {
+
+    cards[i].addEventListener('click', handleCardClick, false);
     cards[i].addEventListener('dragstart', handleDragStart, false);
     cards[i].addEventListener('dragend', handleDragEnd, false);
     cards[i].addEventListener('dragenter', handleDragEnter, false);
