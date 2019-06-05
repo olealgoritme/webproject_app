@@ -10,11 +10,17 @@ $(document).ready(function(){
 });
 // modal assign user button
 var userAssignButton = document.getElementById("assign-user");
-
 userAssignButton.addEventListener("click", assignUser);
 
-function assignUser(){
-    alert("added user");
+// modal assign user function
+var userNode = document.getElementById("modal-user-list");
+
+function assignUser(userDiv){
+    // Structure for added users
+    userDiv = document.createElement("DIV");
+    userDiv.innerHTML = "I am user";
+    userDiv.classList.add("white");
+    userNode.appendChild(userDiv);
 }
 
 // modal icons changing color on click
