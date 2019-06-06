@@ -4,10 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 $(document).ready(function() {
-  $('.modal').modal();
-  $(".dropdown-trigger").dropdown();
-  $('.sidenav').sidenav();
+    $('.modal').modal();
+    $(".dropdown-trigger").dropdown();
+    $('.sidenav').sidenav();
 });
+
+/
 
 // modal assign user button
 var userAssignButton = document.getElementById("assign-user");
