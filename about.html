@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+    <link type="text/css" rel="stylesheet" href="css/daniel_1.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/ole_1.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css" media="screen,projection" />
+</head>
+<body class="blue-grey darken-2">
+    <header>
+        <!-- Header START -->
+        <div class="navbar-fixed">
+            <!-- Dropdown content -->
+            <ul id="user-dropdown" class="dropdown-content">
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Log out</a></li>
+            </ul>
+            <!-- General navigational menu -->
+            <nav class="blue-grey">
+                <!-- Links -->
+                <div class="nav-wrapper blue-grey">
+                    <!-- Logo -->
+                    <a href="#" class="brand-logo center">SilkBoard</a>
+                    <!-- Hamburger menu for smaller screens, js needs to be implemented for it to work -->
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <!-- Links on the left -->
+                    <ul class="nav-mobile left hide-on-med-and-down">
+                        <li><a href="home.html"><i class="material-icons left">house</i>Home</a></li>
+                        <li><a href="index.html"><i class="material-icons left">grid_on</i>Board</a></li>
+                        <li class="active"><a href="#"><i class="material-icons left">info</i>About</a></li>
+                    </ul>
+                    <!-- USER SETTINGS AREA -->
+                    <ul class="nav-mobile right settings-area">
+                        <li>
+                            <img src="img/ole_avatar.jpg" class="circle avatar">
+                            <span class="settings-name">Ole Algoritme</span>
+                        </li>
+                        <li><a class="dropdown-trigger" href="#!" data-target="user-dropdown"><i class="material-icons right">arrow_drop_down</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END USER SETTINGS AREA -->
+                <!-- Search form -->
+                <div class="nav-wrapper container blue-grey lighten-1 hoverable left search-fix">
+                    <form>
+                        <div class="input-field">
+                            <input id="search" type="search" required>
+                            <label class="label-icon" for="search"><i class="material-icons">search</i>
+                            </label><i class="material-icons">close</i>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+            <!-- Hamburger menu content, invisible until screen is resized -->
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+            </ul>
+        </div>
+
+
+        <br><br><b  >
+        <!-- Start of about us --> 
+        <div class ="container">          
+          <div class="col s3">
+                <div class="col s12">
+                    <div class="row valign-wrapper">
+                        <div class="col s4 m3">
+                            <img class="responsive-img">
+                            <img src="img/andreas_avatar.jpg" title="Andreas Falkenberg (andreas@gmail.com)" class="circle responsive-img">
+                            <span class="white-text">Andreas, 20. Founder of Silkboards, enjoyes playing guitar, and also a lot of different activies like fishing.</span>
+                        </div>
+                        <!-- notice the "circle" class -->
+                        <div class="col s4 m3">
+                            <img src="img/ole_avatar.jpg" title="Ole Algoritme (olealgoritme@gmail.com)" class="circle responsive-img"> 
+                            <span class="white-text">Ole, 37. Founder of Silkboards, strives for creativity and enjoyes helping the team to success with his strengths.</span>
+                            <img src="img/kamil_avatar.jpg" title="Kamil Smola (kamil@gmail.com)" class="circle responsive-img">
+                            <span class="white-text">Kamil, 25. Founder of Silkboards, enjoyes to challenge himself in artistic ways, influenced by visuals and creates our sketches at Silkboards.</span>
+                        </div>
+                        <div class="col s4 m3">
+                            <img src="img/daniel_avatar.jpg" title="Daniel Johansen (daniel@gmail.com)" class="circle responsive-img">
+                            <span class="white-text">Daniel, 22. Founder of Silkboards, also enjoyes music and guitar, has a passion for skateboarding and playing games.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+        <!-- End of about us -->
+        <!-- End of Navbar area -->
+    </header>
+    <!-- Header END -->
+    <main>
+        <!-- Main Content START -->
+    </main>
+    <!-- Main Content END -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

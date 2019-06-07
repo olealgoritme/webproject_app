@@ -1,0 +1,227 @@
+/*
+ * Class that limits the BasicCard to only showing
+ * 2 lines of text.
+ * Usage: <p class="basic-card-ellipsis">Long text, very long</p>
+ * */
+
+
+body {
+    font-size: 14px!important;
+    overflow: hidden;
+}
+
+.basic-card {
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 10%;
+    max-height: 15%;
+}
+
+
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+}
+
+
+.topic-title {
+    background-color: rgba(160, 160, 160, 0.15);
+    padding: 10px;
+}
+
+
+
+.control .btn-floating {
+    margin: 5px;
+    opacity: 0.6;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    padding-top: 2px;
+}
+
+.control .btn-floating i {
+    position: absolute;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.control .btn-floating:hover {
+    opacity: 1;
+    transform: rotate(-360deg);
+}
+
+#example {
+    padding: 15px;
+}
+
+.card {
+    transition: transform 0.3s, opacity 0s;
+}
+
+.card::before {
+    content: '';
+    transform: translate3d(0px, 0px, 0px);
+    transition: 0.3s;
+    opacity: 0.5;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: inherit;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.edit>.card {
+    box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.75);
+    opacity: 1 !important;
+}
+
+.mockup::before {
+    content: '';
+    display: block;
+    transform: rotate(2deg);
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: inherit;
+}
+
+.mockup {
+    opacity: 0.5;
+    transform: rotate(-1deg);
+}
+
+.mockup:hover {
+    opacity: 0.8;
+    transform: rotate(0deg);
+}
+
+.mockup-fab {
+    position: absolute;
+    opacity: 1;
+    top: -20px;
+    right: 10px;
+}
+
+.mockup.is-dragged:not(.waves-ripple):not(.mockup-fab):not(a) {
+    opacity: .5;
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+    -webkit-transition: opacity .25s ease-out, -webkit-transform .15s ease-out;
+    transition: opacity .25s ease-out, transform .15s ease-out;
+}
+
+.mockup.dropover {
+    opacity: 0.8;
+    -webkit-transition: opacity .1s;
+    transition: opacity .1s;
+    border: 2px dashed white;
+}
+
+.mockup.dropover:after {
+    transform: scale(1.0) 1s ease-in-out;
+}
+
+#card-container {
+    height: 100%;
+    vertical-align: middle;
+    padding-top: 50px;
+    padding-right: -200px!important;
+    padding-left: 60px;
+    display: grid;
+    width: 100%;
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+    grid-template-columns: repeat(4, 20%);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.rounded {
+    border-radius: .50rem !important;
+}
+
+
+.column {
+    padding-right: 20px;
+    padding-right: 20px;
+}
+
+
+.dummy-border {
+    border: 2px dashed white;
+    border-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
+    border-position: 0px 0px, 200px 100px, 0px 100px, 200px 0px;
+}
+
+.settings-area,
+.settings-name {
+    padding-left: 10px;
+}
+
+.avatar {
+    width: 35px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.assignees {
+    width: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.pad-top-24 {
+    padding-top: 24px!important;
+}
+.pad-bot-24 {
+    padding-bottom: 24px!important;
+}
+.pad-left-24 {
+    padding-left: 24px!important;
+}
+.pad-right-24 {
+    padding-right: 24px!important;
+}
+
+.links {
+  margin-left: -10px!important;
+}
+
+.user-deselected {
+    opacity: .3;
+}
+
+.user-selected {
+    opacity: 1;
+    border: 1px dashed white;
+}
+
+
+.container-card {
+    margin-top: 50px!important;
+    padding-right: 50px;
+}
+
+.space {
+    margin-left: 20px;
+    margin-left: 20px;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+
