@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>SilkBoard</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -9,12 +8,9 @@
     <link type="text/css" rel="stylesheet" href="css/daniel_1.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/ole_1.css" media="screen,projection" />
 </head>
-
 <body class="blue-grey darken-2">
     <header>
         <!-- Header START -->
-
-
         <div class="navbar-fixed">
             <!-- Dropdown content -->
             <ul id="user-dropdown" class="dropdown-content">
@@ -35,24 +31,17 @@
                         <li class="active"><a href="#"><i class="material-icons left">grid_on</i>Tables</a></li>
                         <li><a href="about.html"><i class="material-icons left">info</i>About</a></li>
                     </ul>
-
-
-
                     <!-- USER SETTINGS AREA -->
                     <ul class="nav-mobile right settings-area">
                         <li>
                             <img src="img/ole_1.jpg" class="circle avatar">
                             <span class="settings-name">Ole Algoritme</span>
                         </li>
-                        <li><a class="dropdown-trigger" href="#!" data-target="user-dropdown">
-                                <i class="material-icons right">arrow_drop_down</i>
-                            </a>
+                        <li><a class="dropdown-trigger" href="#!" data-target="user-dropdown"><i class="material-icons right">arrow_drop_down</i></a>
                         </li>
                     </ul>
                 </div>
                 <!-- END USER SETTINGS AREA -->
-
-
                 <!-- Search form -->
                 <div class="nav-wrapper container blue-grey lighten-1 hoverable left search-fix">
                     <form>
@@ -63,9 +52,7 @@
                         </div>
                     </form>
                 </div>
-
             </nav>
-
             <!-- Hamburger menu content, invisible until screen is resized -->
             <ul class="sidenav" id="mobile-demo">
                 <li><a href="sass.html">Sass</a></li>
@@ -73,29 +60,21 @@
                 <li><a href="collapsible.html">Javascript</a></li>
                 <li><a href="mobile.html">Mobile</a></li>
             </ul>
-
         </div>
         <!-- End of Navbar area -->
     </header>
     <!-- Header END -->
-
     <main>
         <!-- Main Content START -->
-
         <h4 class="center white-text">Table</h4>
-
-
         <!-- MODAL EMPTY START-->
-
         <!-- Modal Structure -->
         <div id="generic-modal" class="modal modal-footer blue-grey lighten-2">
             <h4 class="center"><span id="modal-title" contenteditable="true">Title</span></h4>
             <!-- Modal content -->
             <div class="modal-content row">
-
                 <!-- Modal images -->
                 <div id="modal-images" class="col s3">
-
                     <!-- TODO: Add dynamically through JS -->
                     <div class="row">
                         <div class="col s6">
@@ -106,7 +85,6 @@
                         </div>
                     </div>
                     <!-- -->
-
                     <div class="row">
                         <div class="col s6">
                             <img src="img/daniel/daniel_2.jpg" class="responsive-img rounded">
@@ -115,8 +93,6 @@
                             <img src="img/daniel/daniel_2.jpg" class="responsive-img rounded">
                         </div>
                     </div>
-
-
                 </div>
                 <!-- Modal Description -->
                 <div id="modal-description" class="col s6 blue-grey lighten-3">
@@ -127,7 +103,6 @@
                     <div class="container center">Assigned</div>
                     <!-- Container for assigned users -->
                     <div id="modal-user-list" class="container center">
-
                         <div class="container center">
                             <!-- Button to assign user -->
                             <i id="assign-user" class="small material-icons">add</i>
@@ -155,7 +130,6 @@
             </div>
         </div>
         <!-- MODAL EMPTY END -->
-
         <!-- CARDS START -->
         <div id="card-container">
             <div class="white-text topic-title rounded valign center editable-text">
@@ -170,12 +144,6 @@
             <div class="white-text topic-title rounded valign center editable-text">
                 <h5>COMPLETE</h5>
             </div>
-
-
-
-
-
-
             <div class="col s3 column" id="column-1">
                 <div class="row">
                     <div class="black card mockup fullcard" data-id="1" draggable=true>
@@ -193,7 +161,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="black card mockup fullcard" data-id="2" draggable=true>
                         <a class="modal-trigger" href="#generic-modal">
@@ -210,7 +177,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="black card mockup fullcard" data-id="3" draggable=true>
                         <a class="modal-trigger" href="#generic-modal">
@@ -227,7 +193,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="black card mockup fullcard" data-id="4" draggable=true>
                         <a class="modal-trigger" href="#generic-modal">
@@ -245,270 +210,256 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-    <div class="col s3 column" id="column-2">
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="5" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title" id="card-title-2">JS jQuery Tricks</span>
-                        <p class="card-text" id="card-text-2">And stuff</p>
+            <div class="col s3 column" id="column-2">
+                <div class="row">
+                    <div class="black card mockup fullcard" data-id="5" draggable=true>
+                        <a class="modal-trigger" href="#generic-modal">
+                            <div class="card-content white-text">
+                                <span class="card-title" id="card-title-2">JS jQuery Tricks</span>
+                                <p class="card-text" id="card-text-2">And stuff</p>
+                            </div>
+                            <div class="card-action">
+                                <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-2" class="material-icons">done</i></a>
+                                <a href="https://google.no" id="card-2-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                                <a href="https://google.no" id="card-2-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                                <a href="https://google.no" id="card-2-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                            </div>
+                        </a>
                     </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-2" class="material-icons">done</i></a>
-                        <a href="https://google.no" id="card-2-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-2-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-2-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                </div>
+                <div class="row">
+                    <div class="black card mockup fullcard" data-id="6" draggable=true>
+                        <a class="modal-trigger" href="#generic-modal">
+                            <div class="card-content white-text">
+                                <span class="card-title text-ellipsis" id="card-title-3">Take a break</span>
+                                <p class="card-text text-ellipsis " id="card-text-3">Have a kitkat. Or some other cool snacky shit.</p>
+                            </div>
+                            <div class="card-action">
+                                <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-3" class="material-icons">attachment</i></a>
+                                <a href="https://google.no" id="card-3-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                                <a href="https://google.no" id="card-3-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                                <a href="https://google.no" id="card-3-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
+                <div class="row">
+                    <div class="black card mockup fullcard" data-id="7" draggable=true>
+                        <a class="modal-trigger" href="#generic-modal">
+                            <div class="card-content white-text">
+                                <span class="card-title text-ellipsis " id="card-title-4">Profile page layout</span>
+                                <p class="card-text text-ellipsis " id="card-text-4">Different examples we need to work more on</p>
+                            </div>
+                            <div class="card-action">
+                                <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-4" class="material-icons">access_alarm</i></a>
+                                <a href="https://google.no" id="card-4-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                                <a href="https://google.no" id="card-4-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                                <a href="https://google.no" id="card-4-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="black card mockup fullcard" data-id="8" draggable=true>
+                        <a class="modal-trigger" href="#generic-modal">
+                            <div class="card-content white-text">
+                                <span class="card-title text-ellipsis " id="card-title-5">Special edition CSS</span>
+                                <p class="card-text text-ellipsis " id="card-text-5">CSS links and other cool stuff we should talk about</p>
+                            </div>
+                            <div class="card-action">
+                                <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-5" class="material-icons">add</i></a>
+                                <a href="https://google.no" id="card-5-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                                <a href="https://google.no" id="card-5-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                                <a href="https://google.no" id="card-5-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="black card mockup fullcard" data-id="9" draggable=true>
+                        <a class="modal-trigger" href="#generic-modal">
+                            <div class="card-content white-text">
+                                <span class="card-title text-ellipsis" id="card-title-6">Awesome Title</span>
+                                <p class="card-text text-ellipsis" id="card-text-6">This text is quite random. No latin word collection at all..Zzz. And now it has more than 3 fucking lines of text etc. Bla bla bla</p>
+                            </div>
+                            <div class="card-action">
+                                <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-6" class="material-icons">lock</i></a>
+                                <a href="https://google.no" id="card-6-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                                <a href="https://google.no" id="card-6-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                                <a href="https://google.no" id="card-6-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s3 column" id="column-3">
+            <div class="row">
+                <div class="black card mockup fullcard" data-id="10" draggable=true>
+                    <a class="modal-trigger" href="#generic-modal">
+                        <div class="card-content white-text">
+                            <span class="card-title" id="card-title-2">JS jQuery Tricks</span>
+                            <p class="card-text" id="card-text-2">And stuff</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-2" class="material-icons">done</i></a>
+                            <a href="https://google.no" id="card-2-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-2-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-2-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="black card mockup fullcard" data-id="11" draggable=true>
+                    <a class="modal-trigger" href="#generic-modal">
+                        <div class="card-content white-text">
+                            <span class="card-title text-ellipsis" id="card-title-3">Take a break</span>
+                            <p class="card-text text-ellipsis " id="card-text-3">Have a kitkat. Or some other cool snacky shit.</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-3" class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-3-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-3-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-3-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="black card mockup fullcard" data-id="12" draggable=true>
+                    <a class="modal-trigger" href="#generic-modal">
+                        <div class="card-content white-text">
+                            <span class="card-title text-ellipsis " id="card-title-4">Profile page layout</span>
+                            <p class="card-text text-ellipsis " id="card-text-4">Different examples we need to work more on</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-4" class="material-icons">access_alarm</i></a>
+                            <a href="https://google.no" id="card-4-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-4-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-4-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="black card mockup fullcard" data-id="13" draggable=true>
+                    <a class="modal-trigger" href="#generic-modal">
+                        <div class="card-content white-text">
+                            <span class="card-title text-ellipsis " id="card-title-5">Special edition CSS</span>
+                            <p class="card-text text-ellipsis " id="card-text-5">CSS links and other cool stuff we should talk about</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-5" class="material-icons">add</i></a>
+                            <a href="https://google.no" id="card-5-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-5-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-5-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="black card mockup fullcard" data-id="14" draggable=true>
+                    <a class="modal-trigger" href="#generic-modal">
+                        <div class="card-content white-text">
+                            <span class="card-title text-ellipsis" id="card-title-6">Awesome Title</span>
+                            <p class="card-text text-ellipsis" id="card-text-6">This text is quite random. No latin word collection at all..Zzz. And now it has more than 3 fucking lines of text etc. Bla bla bla</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-6" class="material-icons">lock</i></a>
+                            <a href="https://google.no" id="card-6-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-6-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-6-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="6" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis" id="card-title-3">Take a break</span>
-                        <p class="card-text text-ellipsis " id="card-text-3">Have a kitkat. Or some other cool snacky shit.</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-3" class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-3-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-3-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-3-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="7" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis " id="card-title-4">Profile page layout</span>
-                        <p class="card-text text-ellipsis " id="card-text-4">Different examples we need to work more on</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-4" class="material-icons">access_alarm</i></a>
-                        <a href="https://google.no" id="card-4-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-4-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-4-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="8" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis " id="card-title-5">Special edition CSS</span>
-                        <p class="card-text text-ellipsis " id="card-text-5">CSS links and other cool stuff we should talk about</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-5" class="material-icons">add</i></a>
-                        <a href="https://google.no" id="card-5-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-5-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-5-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="9" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis" id="card-title-6">Awesome Title</span>
-                        <p class="card-text text-ellipsis" id="card-text-6">This text is quite random. No latin word collection at all..Zzz. And now it has more than 3 fucking lines of text etc. Bla bla bla</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-6" class="material-icons">lock</i></a>
-                        <a href="https://google.no" id="card-6-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-6-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-6-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-        <div class="col s3 column" id="column-3">
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="10" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title" id="card-title-2">JS jQuery Tricks</span>
-                        <p class="card-text" id="card-text-2">And stuff</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-2" class="material-icons">done</i></a>
-                        <a href="https://google.no" id="card-2-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-2-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-2-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="11" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis" id="card-title-3">Take a break</span>
-                        <p class="card-text text-ellipsis " id="card-text-3">Have a kitkat. Or some other cool snacky shit.</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-3" class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-3-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-3-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-3-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="12" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis " id="card-title-4">Profile page layout</span>
-                        <p class="card-text text-ellipsis " id="card-text-4">Different examples we need to work more on</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-4" class="material-icons">access_alarm</i></a>
-                        <a href="https://google.no" id="card-4-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-4-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-4-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="13" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis " id="card-title-5">Special edition CSS</span>
-                        <p class="card-text text-ellipsis " id="card-text-5">CSS links and other cool stuff we should talk about</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-5" class="material-icons">add</i></a>
-                        <a href="https://google.no" id="card-5-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-5-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-5-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="14" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis" id="card-title-6">Awesome Title</span>
-                        <p class="card-text text-ellipsis" id="card-text-6">This text is quite random. No latin word collection at all..Zzz. And now it has more than 3 fucking lines of text etc. Bla bla bla</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-6" class="material-icons">lock</i></a>
-                        <a href="https://google.no" id="card-6-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-6-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-6-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-
         <div class="col s3 column" id="column-4">
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="15" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title" id="card-title-2">JS jQuery Tricks</span>
-                        <p class="card-text" id="card-text-2">And stuff</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-2" class="material-icons">done</i></a>
-                        <a href="https://google.no" id="card-2-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-2-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-2-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
+            <div class="row">
+                <div class="black card mockup fullcard" data-id="15" draggable=true>
+                    <a class="modal-trigger" href="#generic-modal">
+                        <div class="card-content white-text">
+                            <span class="card-title" id="card-title-2">JS jQuery Tricks</span>
+                            <p class="card-text" id="card-text-2">And stuff</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-2" class="material-icons">done</i></a>
+                            <a href="https://google.no" id="card-2-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-2-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-2-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="16" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis" id="card-title-3">Take a break</span>
-                        <p class="card-text text-ellipsis " id="card-text-3">Have a kitkat. Or some other cool snacky shit.</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-3" class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-3-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-3-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-3-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
+            <div class="row">
+                <div class="black card mockup fullcard" data-id="16" draggable=true>
+                    <a class="modal-trigger" href="#generic-modal">
+                        <div class="card-content white-text">
+                            <span class="card-title text-ellipsis" id="card-title-3">Take a break</span>
+                            <p class="card-text text-ellipsis " id="card-text-3">Have a kitkat. Or some other cool snacky shit.</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-3" class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-3-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-3-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-3-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="17" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis " id="card-title-4">Profile page layout</span>
-                        <p class="card-text text-ellipsis " id="card-text-4">Different examples we need to work more on</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-4" class="material-icons">access_alarm</i></a>
-                        <a href="https://google.no" id="card-4-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-4-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-4-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
+            <div class="row">
+                <div class="black card mockup fullcard" data-id="17" draggable=true>
+                    <a class="modal-trigger" href="#generic-modal">
+                        <div class="card-content white-text">
+                            <span class="card-title text-ellipsis " id="card-title-4">Profile page layout</span>
+                            <p class="card-text text-ellipsis " id="card-text-4">Different examples we need to work more on</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-4" class="material-icons">access_alarm</i></a>
+                            <a href="https://google.no" id="card-4-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-4-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-4-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="18" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis " id="card-title-5">Special edition CSS</span>
-                        <p class="card-text text-ellipsis " id="card-text-5">CSS links and other cool stuff we should talk about</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-5" class="material-icons">add</i></a>
-                        <a href="https://google.no" id="card-5-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-5-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-5-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
+            <div class="row">
+                <div class="black card mockup fullcard" data-id="18" draggable=true>
+                    <a class="modal-trigger" href="#generic-modal">
+                        <div class="card-content white-text">
+                            <span class="card-title text-ellipsis " id="card-title-5">Special edition CSS</span>
+                            <p class="card-text text-ellipsis " id="card-text-5">CSS links and other cool stuff we should talk about</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-5" class="material-icons">add</i></a>
+                            <a href="https://google.no" id="card-5-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-5-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-5-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="black card mockup fullcard" data-id="19" draggable=true>
-                <a class="modal-trigger" href="#generic-modal">
-                    <div class="card-content white-text">
-                        <span class="card-title text-ellipsis" id="card-title-6">Awesome Title</span>
-                        <p class="card-text text-ellipsis" id="card-text-6">This text is quite random. No latin word collection at all..Zzz. And now it has more than 3 fucking lines of text etc. Bla bla bla</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-6" class="material-icons">lock</i></a>
-                        <a href="https://google.no" id="card-6-link-1" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-6-link-2" target="_blank"><i class="material-icons">attachment</i></a>
-                        <a href="https://google.no" id="card-6-link-3" target="_blank"><i class="material-icons">attachment</i></a>
-                    </div>
-                </a>
+            <div class="row">
+                <div class="black card mockup fullcard" data-id="19" draggable=true>
+                    <a class="modal-trigger" href="#generic-modal">
+                        <div class="card-content white-text">
+                            <span class="card-title text-ellipsis" id="card-title-6">Awesome Title</span>
+                            <p class="card-text text-ellipsis" id="card-text-6">This text is quite random. No latin word collection at all..Zzz. And now it has more than 3 fucking lines of text etc. Bla bla bla</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="mockup-fab btn-floating waves-effect waves-light red"><i id="card-icon-6" class="material-icons">lock</i></a>
+                            <a href="https://google.no" id="card-6-link-1" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-6-link-2" target="_blank"><i class="material-icons">attachment</i></a>
+                            <a href="https://google.no" id="card-6-link-3" target="_blank"><i class="material-icons">attachment</i></a>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-
-
-
-
-        </div>
-        <!-- CARDS END -->
-
+    <!-- CARDS END -->
     </main>
     <!-- Main Content END -->
-
     <footer class="page-footer blue-grey darken-3">
         <!-- Footer start area -->
         <div class="container center">
@@ -534,7 +485,6 @@
                 <a class="grey-text text-lighten-4 right" href="#">Community page?</a>
             </div><!-- container end -->
         </div>
-
     </footer><!-- Footer END -->
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
@@ -542,5 +492,4 @@
     <script type="text/javascript" src="js/ole_1.js"></script>
     <script type="text/javascript" src="js/jquery.jeditable.js"></script>
 </body>
-
 </html>
