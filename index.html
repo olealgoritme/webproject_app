@@ -127,21 +127,56 @@
         </div>
         <!-- MODAL EMPTY END -->
 
+        <!-- MODAL ADD CARD -->
+        <div id="modal-add-card" class="modal modal-footer blue-grey lighten-4 rounded">
+          <div class="modal-content">
+            <h4>Create new card</h4>
+              <div class="row">
+                      <div class="row">
+                          <div class="input-field col s4">
+                              <input id="card-input-title" class="modal-text" type="text" data-length="10">
+                                  <label for="card-input-title">Title</label>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="input-field col s6">
+                              <textarea id="card-input-text" class="text-white materialize-textarea" data-length="120"></textarea>
+                                  <label for="card-input-text">Description Text</label>
+                          </div>
+                      </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <a id="card-add" href="#" class="waves-effect waves-green btn-flat">Add</a>
+          </div>
+        </div>
+        <!-- MODAL ADD CARD END -->
+
+
+        
         <!-- CARDS START -->
         <div id="container-cards">
             <div class="row">
-            <div id="topic-1" class="col s3 column space white-text topic-title">
-                <h6 class="topic-title rounded valign center">IDEAS</h6>
-            </div>
-            <div id="topic-2" class="col s3 column space white-text topic-title">
-                <h6 class="topic-title rounded valign center">TODO</h6>
-            </div>
-            <div id="topic-3" class="col s3 column space white-text topic-title">
-                <h6 class="topic-title rounded valign center">IN PROGRESS</h6>
-            </div>
-            <div id="topic-4" class="col s3 column space white-text topic-title">
-                <h6 class="topic-title rounded valign center">COMPLETE</h6>
-            </div>
+                <a class="modal-trigger" href="#modal-add-card">
+                    <div id="topic-1" class="col s3 column space white-text topic-title">
+                        <h6 class="topic-title rounded valign center">IDEAS</h6>
+                    </div>
+                </a>
+                <a class="modal-trigger" href="#modal-add-card">
+                    <div id="topic-2" class="col s3 column space white-text topic-title">
+                        <h6 class="topic-title rounded valign center">TODO</h6>
+                    </div>
+                </a>
+                <a class="modal-trigger" href="#modal-add-card">
+                    <div id="topic-3" class="col s3 column space white-text topic-title">
+                        <h6 class="topic-title rounded valign center">IN PROGRESS</h6>
+                    </div>
+                </a>
+                <a class="modal-trigger" href="#modal-add-card">
+                    <div id="topic-4" class="col s3 column space white-text topic-title">
+                        <h6 class="topic-title rounded valign center">COMPLETE</h6>
+                    </div>
+                </a>
             </div>
 
             <div class="row">

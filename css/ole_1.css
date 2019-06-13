@@ -224,4 +224,6 @@ body {
     min-width: 300px;
 }
 
-
+.close-hidden {
+    visibility: hidden;
+}

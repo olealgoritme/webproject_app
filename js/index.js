@@ -12,6 +12,7 @@ const DEBUG = true;
 var draggedCard = null, card = null, column = null, columnId = null;
 var currentColumn = 0;
 
+var currentTopicColumn = null;
 function debug(s) {
   if (DEBUG)
     console.log(s);
@@ -41,11 +42,11 @@ function getColumnByCard(card) {
 
 /*
 function hasDummy(column) { return (column.dataset.dummy); }
+*/
 
 function createDummyCard(parent) {
   if (!$(parent).find('#dummyrow').length) {
-    $(parent).prepend(
-        '<div class="row" id="dummyrow"><div class="black card mockup fullcard dummy-border"><div class="card-content white-text"><span class="card-title">Drop</span><p class="card-text">Right here</p></div><div class="card-action"></div></div></div>');
+    $(parent).prepend('<div class="row" id="dummyrow"><div class="black card mockup fullcard dummy-border dropover"><div class="card-content white-text"><span class="card-title">Drop</span><p class="card-text">Right here</p></div><div class="card-action"></div></div></div>');
   $(parent).attr('data-dummy=true');
   }
 }
@@ -54,7 +55,7 @@ function removeDummyCard(parent) {
     var child = $(parent).find('#dummyrow');
     if(child != null)child.remove();
 }
-
+    /*
 function columnToggle(column) {
   if ($(column).hasClass('expand-column'))
     removeClass(column, 'expand-column');
@@ -83,12 +84,12 @@ function handleDone(e) {
   if (hasDummy(this))
     removeDummyCard(this);
 }
-*/
+
 
 function getAllColumns() {
   return document.querySelectorAll('div.col.s3.column');
 }
-
+    */
 function handleCardClick(e) {
   card = this;
     //card = BasicCard.fromHTML(card);
@@ -233,9 +234,11 @@ function handleDrop(e) {
       }
       $(draggedCard).focus();
       $(draggedCard).hover();
-      
+
   }
     removeClass(thisCard, 'dropover');
+
+    currentColumn = columnId;
 }
 
 function handleDragStart(e) {
@@ -275,7 +278,8 @@ function handleDragEnter(e) {
   if (currentColumn != columnId)
     column.dispatchEvent(eventEnterColumn);
 
-  currentColumn = columnId;
+    currentColumn = columnId;
+
 }
 
 function handleDragLeave(e) {
@@ -289,11 +293,12 @@ function handleDragLeave(e) {
 
   if (currentColumn != columnId)
     column.dispatchEvent(eventLeaveColumn);
-  currentColumn = columnId;
+
+    currentColumn = columnId;
 }
 
 function handleDragOver(e) {
-  //  debug("dragOver");
+  debug("dragOver");
 
   if (e.stopPropagation)
     e.stopPropagation();
@@ -521,7 +526,6 @@ function addCards() {
     card.addAssignee(1); // id til bruker (1 = Ole)
     card.addAssignee(2); // id til bruker (2 = Daniel)
     card.addAssignee(3); // id til bruker (3 = Kamil)
-    card.addAssignee(4); // id til bruker (4 = Andreas)
     cards.push(card);
 
     /* Card 4 */
@@ -534,7 +538,6 @@ function addCards() {
     card.addAssignee(1); // id til bruker (1 = Ole)
     card.addAssignee(2); // id til bruker (2 = Daniel)
     card.addAssignee(3); // id til bruker (3 = Kamil)
-    card.addAssignee(4); // id til bruker (4 = Andreas)
     cards.push(card);
 
     /* Card 5 */
@@ -547,7 +550,6 @@ function addCards() {
     card.addAssignee(1); // id til bruker (1 = Ole)
     card.addAssignee(2); // id til bruker (2 = Daniel)
     card.addAssignee(3); // id til bruker (3 = Kamil)
-    card.addAssignee(4); // id til bruker (4 = Andreas)
     cards.push(card);
 
     /* Card 6 */
@@ -560,7 +562,6 @@ function addCards() {
     card.addAssignee(1); // id til bruker (1 = Ole)
     card.addAssignee(2); // id til bruker (2 = Daniel)
     card.addAssignee(3); // id til bruker (3 = Kamil)
-    card.addAssignee(4); // id til bruker (4 = Andreas)
     cards.push(card);
 
     /*
@@ -677,6 +678,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+function getRandomID(min, max) {
+    return Math.floor(Math.random() * ( max - min + 1 ) + min);
+}
+
 $(document).ready(function() {
 
 
@@ -692,6 +697,60 @@ $(document).ready(function() {
         $(this).off('draggable');
     });
 
+    // topic click sets global variable currentTopicColumn (se know which topic was clicked on, and add card to correct place)
+    $('div[id^=topic-]').each(function() {
+        $(this).on('click', function() {
+            var id = $(this).attr('id');
+            id = id.substring(6,id.length);
+            currentTopicColumn = "column-" + id;
+            console.log(currentTopicColumn);
+        });
+    });
+
+    // card add button (in modal)
+    $('#card-add').on('click', function() {
+        
+        // get title, text, icon, column and id
+        var title = $('#card-input-title').val();
+        var text = $('#card-input-text').val();
+
+        if(title.length < 5 || text.length < 5) {
+            M.toast({html: 'Title / text needs more than 5 characters'});
+            return false;
+        }
+        var icon = 'thumb_up';
+        var column = currentTopicColumn;
+        var id = getRandomID(50,2000);
+
+        // put new card in correct column, with attributes
+        $('#' + column).append('<div class="row"><div class="black card mockup space fullcard" id="'+ id +'" draggable=true><a class="modal-trigger" href="#generic-modal"><div class="card-content white-text"><span class="card-title text-ellipsis" id="card-title-' + id + '">'+ title +'</span><p class="card-text text-ellipsis" id="card-text-' + id + '">' + text + '</p></div><div class="card-action pad-top-24"><a class="mockup-fab btn-floating waves-light ' + icon + '"><i id="card-icon-' + id + '" class="material-icons">'+ icon +'</i></a><img id="assignees-' + id +'-1" data-name="Ole Algoritme" data-email="olealgoritme@gmail.com" title="Ole Algoritme (olealgoritme@gmail.com)" src="img/ole_avatar.jpg" class="right circle assignees user-deselected"><img id="assignees-' + id + '-2" data-name="Kamil Smola" data-email="kamil@gmail.com" title="Kamil Smola (kamil@gmail.com)" src="img/kamil_avatar.jpg" class="right circle assignees user-deselected"><img id="assignees-' + id +'-3" data-name="Daniel Johansen" data-email="daniel@gmail.com" title="Daniel Johansen (daniel@gmail.com)" src="img/daniel_avatar.jpg" class="right circle assignees user-deselected"><img id="assignees-' + id + '-4" data-name="Andreas Falkenberg" data-email="andreas@gmail.com" title="Andreas Falkenberg (andreas@gmail.com)" src="img/andreas_avatar.jpg" class="right circle assignees user-deselected"></div></a></div></div>');
+
+
+        // add eventlistener for new card added
+        var element = document.getElementById(id);
+          element.addEventListener('click', handleCardClick, false);
+          element.addEventListener('dragstart', handleDragStart, false);
+          element.addEventListener('dragend', handleDragEnd, false);
+          element.addEventListener('dragenter', handleDragEnter, false);
+          element.addEventListener('dragleave', handleDragLeave, false);
+          element.addEventListener('dragover', handleDragOver, false);
+          element.addEventListener('drop', handleDrop, false);
+        
+
+        $('#modal-add-card').modal('close');
+    
+    });
+    /*
+  
+    $('.fullcard').hover(function() {
+       $(this).prepend('<a href="#close"><i id="card-close" class="close-hidden close material-icons right white-text">close</i></a>'); 
+    },
+   function() {
+        $(this).remove('#card-close');
+    
+    });
+    */
+    
     //$('.editable-text').editable('https://bfy.tw/O0Ag');
     /*
     var topics = document.querySelectorAll('div.topic.title');
@@ -717,8 +776,23 @@ $(document).ready(function() {
     cards[i].addEventListener('drop', handleDrop, false);
   }
 
+    $('#modal-add-card').modal({
+       dismissible: true, // Modal can be dismissed by clicking outside of the modal
+       onOpenEnd: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+         console.log(modal, trigger);
+       },
+        onCloseEnd: function() {
+            // reset modal
+            var title = $('#card-input-title');
+            var text = $('#card-input-text');
+            $('#modal-add-card').modal('close');
+            text.val('');
+            title.val('');
+        }
+    }
+   );
 
-    $('.modal').modal({
+    $('#generic-modal').modal({
        dismissible: true, // Modal can be dismissed by clicking outside of the modal
        onOpenEnd: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
          console.log(modal, trigger);
